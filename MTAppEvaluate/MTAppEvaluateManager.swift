@@ -50,7 +50,11 @@ class MTAppEvaluateManager: NSObject {
     /// 展示评论弹窗
     public func show() {
         let alert = self.delegate.MT_AppEvaluateTipAlert(comment: { [weak self] in
-            self?.baseViewController?.present(UIViewController(), animated: true, completion: nil)
+            guard let commentVC = self?.delegate.MT_AppEvaluateCommentViewController() else {
+                self?.commentByAppStore()
+                return
+            }
+            self?.baseViewController?.present(commentVC, animated: true, completion: nil)
         }) { [weak self] in
             self?.showEvaluate()
         }
@@ -70,6 +74,12 @@ extension MTAppEvaluateManager {
         case .OutApp:
             self.showByOutApp()
         }
+    }
+    
+    fileprivate func commentByAppStore() {
+        let urlStr = "https://itunes.apple.com/us/app/id\(self.appID)?ls=1&mt=8&action=write-review"
+        guard let url = URL(string: urlStr) else { return }
+        UIApplication.shared.openURL(url)
     }
     
     /// App内部弹窗，只支持10.3以上系统，10.3以下系统自动转为App内部评论
