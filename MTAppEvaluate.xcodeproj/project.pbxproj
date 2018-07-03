@@ -13,6 +13,8 @@
 		30D5931B20EB59DB00C9491C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30D5931A20EB59DB00C9491C /* Assets.xcassets */; };
 		30D5931E20EB59DC00C9491C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30D5931C20EB59DC00C9491C /* LaunchScreen.storyboard */; };
 		30D5932920EB59DC00C9491C /* MTAppEvaluateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D5932820EB59DC00C9491C /* MTAppEvaluateUITests.swift */; };
+		30D5933520EB60D200C9491C /* MTAppEvaluateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D5933420EB60D200C9491C /* MTAppEvaluateProtocol.swift */; };
+		30D5933720EB611200C9491C /* MTAppEvaluateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D5933620EB611200C9491C /* MTAppEvaluateManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		30D5932420EB59DC00C9491C /* MTAppEvaluateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MTAppEvaluateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		30D5932820EB59DC00C9491C /* MTAppEvaluateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTAppEvaluateUITests.swift; sourceTree = "<group>"; };
 		30D5932A20EB59DC00C9491C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30D5933420EB60D200C9491C /* MTAppEvaluateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTAppEvaluateProtocol.swift; sourceTree = "<group>"; };
+		30D5933620EB611200C9491C /* MTAppEvaluateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTAppEvaluateManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +63,8 @@
 		30D5930720EB59C800C9491C = {
 			isa = PBXGroup;
 			children = (
-				30D5931220EB59C800C9491C /* MTAppEvaluate */,
+				30D5933320EB5B6F00C9491C /* MTAppEvaluate */,
+				30D5931220EB59C800C9491C /* MTAppEvaluateExample */,
 				30D5932720EB59DC00C9491C /* MTAppEvaluateUITests */,
 				30D5931120EB59C800C9491C /* Products */,
 			);
@@ -74,7 +79,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		30D5931220EB59C800C9491C /* MTAppEvaluate */ = {
+		30D5931220EB59C800C9491C /* MTAppEvaluateExample */ = {
 			isa = PBXGroup;
 			children = (
 				30D5931320EB59C800C9491C /* AppDelegate.swift */,
@@ -84,7 +89,7 @@
 				30D5931C20EB59DC00C9491C /* LaunchScreen.storyboard */,
 				30D5931F20EB59DC00C9491C /* Info.plist */,
 			);
-			path = MTAppEvaluate;
+			path = MTAppEvaluateExample;
 			sourceTree = "<group>";
 		};
 		30D5932720EB59DC00C9491C /* MTAppEvaluateUITests */ = {
@@ -94,6 +99,15 @@
 				30D5932A20EB59DC00C9491C /* Info.plist */,
 			);
 			path = MTAppEvaluateUITests;
+			sourceTree = "<group>";
+		};
+		30D5933320EB5B6F00C9491C /* MTAppEvaluate */ = {
+			isa = PBXGroup;
+			children = (
+				30D5933420EB60D200C9491C /* MTAppEvaluateProtocol.swift */,
+				30D5933620EB611200C9491C /* MTAppEvaluateManager.swift */,
+			);
+			path = MTAppEvaluate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +212,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				30D5931620EB59C800C9491C /* ViewController.swift in Sources */,
+				30D5933720EB611200C9491C /* MTAppEvaluateManager.swift in Sources */,
+				30D5933520EB60D200C9491C /* MTAppEvaluateProtocol.swift in Sources */,
 				30D5931420EB59C800C9491C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,7 +376,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 82XGZDMK99;
-				INFOPLIST_FILE = MTAppEvaluate/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MTAppEvaluateExample/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -378,7 +395,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 82XGZDMK99;
-				INFOPLIST_FILE = MTAppEvaluate/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MTAppEvaluateExample/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
