@@ -54,6 +54,10 @@ class MTAppEvaluateManager: NSObject {
                 self?.commentByAppStore()
                 return
             }
+            if let navi = self?.baseViewController as? UINavigationController {
+                navi.pushViewController(commentVC, animated: true)
+                return
+            }
             self?.baseViewController?.present(commentVC, animated: true, completion: nil)
         }) { [weak self] in
             self?.showEvaluate()
